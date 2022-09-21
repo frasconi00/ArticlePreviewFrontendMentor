@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Samuele Frasconi">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Article preview component</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; display: none;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="imgContainer"></div>
+    <section>
+      <h1>
+        Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home
+      </h1>
+      <p>
+        Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.
+      </p>
+      <article>
+        <img src="images/avatar-michelle.jpg" alt="Michelle">
+        <div>
+          <h2>Michelle Appleton</h2>
+          <p>28 Jun 2020</p>
+        </div>
+        <div class="shareContainer">
+          <div class="nonVisible hide">
+            <p>SHARE</p>
+            <a href="https://it-it.facebook.com/" target="_blank"><img class="social" src="images/icon-facebook.svg" alt="facebook"></a>
+            <a href="https://twitter.com/" target="_blank"><img class="social" src="images/icon-twitter.svg" alt="twitter"></a>
+            <a href="https://www.pinterest.it/login/" target="_blank"><img class="social" src="images/icon-pinterest.svg" alt="pinterest"></a>
+          </div>
+          <div class="arrow hide"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Samuele Frasconi</a>.
+  </div>
+</body>
+<script>
+  let btn = document.querySelector(".shareContainer");
+  
+  btn.addEventListener("click", e => {
+    let el1 = document.querySelector(".nonVisible");
+    let el2 = document.querySelector(".arrow");
+    let el3 = document.querySelector(".shareContainer");
+    let el4 = document.getElementsByTagName("article")[0];
+
+    el1.classList.toggle("hide");
+    el2.classList.toggle("hide");
+    el3.classList.toggle("changeColor");
+    el4.classList.toggle("changeBg");
+  })
+</script>
+</html>
